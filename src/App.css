@@ -1,38 +1,94 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #fffffa;
+  font-family: 'Courier New', Courier, monospace;
   min-height: 100vh;
+  padding: 10px;
+}
+
+/* Navbar css */
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 10px; */
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column; /* Stack hamburger and menu vertically */
+  gap: 10px;
+}
+
+.hamburger {
   display: flex;
   flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background: black;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+/* Animation for the lines */
+.line.rotate1 {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.line.rotate2 {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.line.fade {
+  opacity: 0;
+}
+
+/* Menu Styles */
+.menu-container {
+  display: none; /* Hide the menu by default */
+  width: fit-content;
+  flex-direction: column; /* Stack menu items vertically */
+  gap: 10px; /* Space between items */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+.menu-container.show {
+  display: flex; /* Show the menu when toggled */
+  position: fixed;
+  z-index: 1;
+}
+
+.menu-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  color: #000;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  background: #d1e8ff; /* Light blue on hover */
+}
+
+.lef-section {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lef-section h2 {
+  margin: 0;
+  letter-spacing: 1px;
 }

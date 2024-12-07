@@ -1,0 +1,69 @@
+.loading{
+    font-size: 30px;
+    padding-top: 2rem;
+}
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+    padding: 0 10px;
+    margin-top: 1.5rem;
+}
+
+/* Search Css */
+.search {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.search input {
+    width: 33rem;
+    padding: 10px;
+    border-radius: 1.5rem;
+    border: 2px solid #000;
+}
+
+.search button {
+    background-color: #45a049;
+    padding: 10px 15px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 1.5rem;
+}
+
+/* Recipe Card */
+
+.card {
+    width: calc(33.333% - 20px);
+    /* Three cards per row on larger screens */
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    .card {
+        width: calc(50% - 20px);
+        /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        /* One card per row on small screens */
+    }
+    .search {
+        margin-top: 1rem;
+        gap: 8px;
+    }
+    .search input {
+        width: auto;
+    }
+    .loading {
+        font-size: 20px;
+    }
+}
